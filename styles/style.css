@@ -65,6 +65,8 @@ ol {
 
 .content {
   display: grid;
+  grid-template-columns: 711px 399px;
+  grid-template-rows: 534px;
   grid-template-areas: "result details";
   align-items: end;
   gap: 30px;
@@ -84,7 +86,7 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .content__details {
@@ -146,7 +148,8 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  height: 210px;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
@@ -165,7 +168,7 @@ ol {
 
 .content__video-card-title {
   overflow: hidden;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
@@ -198,6 +201,8 @@ ol {
 
 .search-form__label {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   width: fit-content;
   cursor: pointer;
@@ -209,12 +214,16 @@ ol {
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  color: #ffffffb2;
-  font-family: "Fira Sans Condensed";
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21.6px;
   background-color: transparent;
+}
+
+.search-form__textfield::placeholder {
+  color: #ffffffb2;
 }
 
 .search-form__textfield:focus {
@@ -256,7 +265,7 @@ ol {
 .button {
   border: 1px solid #fff;
   color: #fff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
   font-size: 18px;
   line-height: 21.6px;
